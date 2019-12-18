@@ -1,0 +1,19 @@
+
+4185  : image_ID 
+
+https://randopic.herokuapp.com/images/4185 
+
+
+      function updateLikes(likesCount, imageLikesP) { 
+
+        imageLikesP.innerText = likesCount
+        
+      // you can see what the response looks like here 'data' 
+      // this is persimisitic rendering hence this function is not necessary 
+      // debugger 
+ 
+      }
+
+
+       let commentForm = document.getElementById("comment_form")
+        commentForm.addEventListener("submit",() => processForm()) 
