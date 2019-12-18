@@ -55,12 +55,30 @@
      
       /* page is not being updated until refresh  .. review above later */ 
 
-
        function getform() {return document.getElementById("comment_form")}
 
        function processForm(e) { 
 
-       
+       let comment = currentTarget.firstElementChild.value  
+
+        const configOption = {
+          method:"POST" ,
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          } ,
+          body: JSON.stringify({image_id: 4185,content: comment})
+        }
+           fetch("https://randopic.herokuapp.com/comments",configOption)
+           .then(res = res.json())
+           .then(data => updateDOM(data))
+           
 
       }
 
+
+         function updateDOM(data) {    
+        
+          
+  
+        } 
